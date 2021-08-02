@@ -47,7 +47,7 @@ Student Mmt
     publish results
 
 
-
+			// @@@   FROM HERE   @@@
 Payment Mmt
 
     //functionalities
@@ -66,18 +66,43 @@ Payment Mmt
 
 Lecturers MMt
 
-    //functionalities
-    view lecturers courses
-    view performance of each lecturer
-    appoint lecturer
+   	//functionalities
+    	view school schedle of activities
+	view enrolled students
+	view lecturer info edit less sensible info
+	upload results
+
+	//properties
+	Name
+        degree/info
+	appointed courses
+        email
+        phone
+        address
+        sex
+        dob
+		
 
 student Mmt
 
     //functionalities
-        pay fees
-        consult result (validate transaction)
-        sign up
-
+        register
+	view student info
+	edit less sensible student info
+	consult transcript
+	view school schedle of activities	
+	
     //properties
+	Name
+        degree program
+	year
+	guardian info
+	required credit
+	completed credit
+        email
+        phone
+        address
+        sex
+        dob
 
 git remote add origin https://github.com/IndraS1998/School-Management-System.git
