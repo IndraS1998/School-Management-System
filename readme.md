@@ -70,3 +70,14 @@ Lecturers MMt
     view lecturers courses
     view performance of each lecturer
     appoint lecturer
+
+student Mmt
+
+    //functionalities
+        pay fees
+        consult result (validate transaction)
+        sign up
+
+    //properties
+
+git remote add origin https://github.com/IndraS1998/School-Management-System.git
