@@ -1,0 +1,216 @@
+.main_section{
+    width: 100%;
+    padding: 3rem;
+    min-height: 40vh;
+}
+
+.first-section{
+    width: 100%;
+}
+
+.border-red{
+    border: solid 1px red;
+}
+
+.main-header{
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--main-blue);
+    text-transform: capitalize;
+}
+
+.info_header{
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: var(--main-blue);
+    text-transform: uppercase;
+}
+
+.text-section{
+    margin-top: 2rem;
+    padding: 1rem 10rem;
+    width: 100%;
+}
+
+.info-header-section{
+    padding: 0 10rem;
+}
+
+.secondary-header{
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--red);
+}
+
+.image-container{
+    height: 90vh;
+    width: 90%;
+    margin: 2.5rem 1rem;
+}
+
+.img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+
+.info-txt-header{
+    color: var(--main-blue);
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.register-section{
+    padding: 1rem 0;
+    margin-top: 1rem;
+    min-height: 45vh;
+    width: 55vw;
+    border: 2px solid rgb(223, 220, 220);
+    transition: ease-in 1s;
+}
+
+.register-section:hover{
+    border: 2px solid var(--light-blue);
+}
+
+.register-section-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.regitration_input{
+    border: 2px solid var(--medium-blue);
+    cursor: text;
+    width: 12rem;
+    height: 2.3rem;
+    margin: 0 1rem;
+    border-radius: 7px;
+}
+
+.regitration_input:focus{
+    outline: none;
+}
+
+.admission_container{
+    margin: 3rem 0;
+    min-height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: var(--green);
+    color: white;
+}
+
+
+.error-txt{
+    font-size: 0.95rem;
+    color: var(--red);
+}
+
+.toogle-txt{
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--main-blue);
+}
+
+.welcome_container{
+    width: 100%;
+    margin:1.5rem 0 ;
+    padding:1.5rem 0 ;
+    border-top: solid 1px var(--light-blue);
+}
+
+.text-name{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+.registration_txt-main{
+    font-size: 1.3rem;
+    color: var(--dark-grey);
+}
+.registration_txt{
+    font-size: 1rem;
+    color: var(--dark-grey);
+}
+
+/*          ###         MEDIA QUERY         ###         */
+@media only screen and (max-width : 1024px) {
+    .image-container{
+        height: 40vh;
+        width: 90%;
+        margin: 2.5rem 1rem;
+    }
+    .text-section{
+        margin-top: 2rem;
+        padding: 1rem;
+        width: 100%;
+    }
+    .registration_txt-main{
+        font-size: 1.2rem;
+        color: var(--dark-grey);
+    }
+    .registration_txt{
+        font-size: 1.1rem;
+        color: var(--dark-grey);
+    }
+        
+    .register-section{
+        padding: 1rem 0;
+        margin-top: 1rem;
+        min-height: 45vh;
+        width: 95%;
+        border: 2px solid rgb(223, 220, 220);
+        transition: ease-in 1s;
+    }
+
+    .error-txt{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .image-container{
+        display: none;
+    }
+
+    .text-section{
+        margin-top: 2rem;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .registration_txt{
+        font-size: 1.2rem;
+        color: var(--dark-grey);
+    }
+
+    .register-section{
+        padding: 1rem 0;
+        margin-top: 1rem;
+        min-height: 45vh;
+        width: 95%;
+        border: 2px solid rgb(223, 220, 220);
+        transition: ease-in 1s;
+    }
+
+    .register-section-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .regitration_input{
+        width: 17rem;
+        height: 2.3rem;
+    }
+
+    .info-header-section{
+        padding: 0 1rem;
+    }
+    
+}

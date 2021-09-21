@@ -106,3 +106,92 @@ student Mmt
         dob
 
 git remote add origin https://github.com/IndraS1998/School-Management-System.git
+
+Student Functionalities
+	//signup for a student account
+	//login to your personal account
+	//view all schools and select yours
+	//view all departments and select yours
+	//select year of entry, year 1 or year 3
+	//register(done at the start of the year)
+	//validate fee payment 
+	//receive admission and finish setup
+	//view current courses that semester
+	//get get transcript
+	//marking the current page in links
+
+
+
+ react toastify
+dashboard views
+	Dashboard
+		-number of studens
+		-all faculties
+		-all departments
+		
+	My Semester
+		-courses for present semester
+		-result so far i.e ca and exam marks for courses so far
+		-my timetable
+	
+	Registration
+		-regiter and fee payment by installment
+		-percentage of the fee paid
+
+	Get Transcript
+		-view transcripts and download them
+		-view results
+
+	Calendar
+		-important upcoming activities
+		-view school calendar and marked activities
+
+	School Info
+		-about the school, creation etc
+		-previous hnd results
+		-school contact
+
+	Personal Info
+		-image
+		-faculty
+		-department
+		-contact
+		-number of courses validated
+		-number of courses to reseat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

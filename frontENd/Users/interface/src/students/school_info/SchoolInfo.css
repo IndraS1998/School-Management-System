@@ -1,0 +1,135 @@
+.information_section-container{
+    min-height: 95vh;
+    width: 100%;
+    background-color: var(--secondary-white);
+}
+
+.informative_dashboard-container{
+    height: 10rem;
+}
+
+.informative_dashboard{
+    width: 17rem;
+    height: 5rem;
+    margin: 1px 0.5rem;
+    border-radius: 3px;
+    background-color: var(--white);
+}
+
+.heading-dashboard{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: var(--main-blue);
+}
+
+.info-dashboard{
+    font-size: 1rem;
+    margin-left: 1rem;
+    text-transform: capitalize;
+    color: var(--light-blue);
+}
+
+.head-above{
+    margin-top: 1.2rem;
+}
+
+.number_info-section{
+    height: 1.8rem;
+    width: 1.8rem;
+    background-color: var(--light-red);
+    border-radius: 50%;
+}
+
+.number_info{
+    font-size: 0.9rem;
+    color: var(--red);
+}
+
+.number_info-section-green{
+    height: 1.8rem;
+    width: 1.8rem;
+    background-color: var(--light-green);
+    border-radius: 50%;
+}
+
+.number_info-green{
+    font-size: 0.9rem;
+    color: var(--green);
+}
+
+.number_info-section-blue{
+    height: 1.8rem;
+    width: 1.8rem;
+    background-color: var(--vlight-blue);
+    border-radius: 50%;
+}
+
+.number_info-blue{
+    font-size: 0.9rem;
+    color: var(--main-blue);
+}
+
+.percentage_section{
+    background-color: var(--white);
+    height: 25rem;
+    width: 45rem;
+    margin: 1rem 0.5rem;
+    border-radius: 3px;
+}
+
+.percentage_section-header{
+    font-size: 1.3rem;
+    color: var(--light-blue);
+    text-transform: capitalize;
+}
+
+.percentage_header{
+    font-size: 2.4rem;
+    margin: 1px 0.5rem;
+    color: var(--light-blue);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.actual-percentage{
+    font-size: 2rem;
+    color: var(--green);
+    margin: 1px 0 3px 05rem;
+    text-transform: uppercase;
+}
+
+.percentage_container{
+    height: 92%;
+}
+
+.particular_contained{
+    width: 100%;
+    height: 50%;
+}
+
+.side_percentage{
+    background-color: var(--white);
+    height: 25rem;
+    width: 23rem;
+    margin: 1px 0.5rem 3px 1px;
+    border-radius: 3px;
+}
+
+.percentage_header-sm{
+    font-size: 1.1rem;
+    margin: 1px 0.5rem;
+    color: var(--light-blue);
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.actual-percentage-sm{
+    font-size: 1rem;
+    color: var(--green);
+    margin: 1px 0 3px 05rem;
+    text-transform: uppercase;
+}
+
+.side-percentage-container{
+    height: 93%;
+}

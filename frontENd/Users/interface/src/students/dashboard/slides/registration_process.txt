@@ -1,0 +1,16 @@
+        Incase of a new student
+
+*after the student has successfully created a user account,
+
+selects the various properties required I.E : year of entry, speciality, and necessary file upload.
+then student validates a transaction by paying registration fee then leaves the system
+
+after some time, admin responds with a message containing the student matricule and transcript identification number
+
+
+        Incase of an old student
+
+system displays the amount of fees already paid in terms of percentages
+it also shows a button for fee payment
+
+system should store information for incomplete transactions

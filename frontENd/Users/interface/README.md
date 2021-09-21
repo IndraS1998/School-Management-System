@@ -68,3 +68,50 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### To-do
+error handling for login-logout (done)
+build notification for messages and info hint
+mobile view
+
+payment page
+	--check file size (DONE)
+	--add indicator of registration progress
+	--saperation of various components (DONE)
+
+-personal info
+	--deal with image upload  $DONE
+	--perform password editing $DONE
+	--add message submission form	$DONE
+
+-registration page
+	-- fill in the details on sign up &DONE
+	--add indicator of registration progress  &DONE
+
+-edit dashboard landing page
+
+-do mobile mobile and tablette display for welcome and register pages
+	--mobile
+		---navbar @DONE
+		---home page	@DONE
+		---about page	@DONE
+		---register page	@DONE	
+		---footer page		@DONE
+
+	--check mobile
+
+	--tablette
+		---navbar @DONE
+		---home page	@DONE	
+		---about page	@DONE
+		---register page	@DONE
+		---footer page	@DONE
+		
+-do mobile and tablette for dashboard slides
+
+-set server with database
+
+-link frontend with api
+
+-add notifications
+	--when user enters reegistration pageas long as admission datais not yet set #DONE

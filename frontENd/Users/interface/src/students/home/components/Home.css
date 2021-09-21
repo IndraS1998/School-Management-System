@@ -1,0 +1,212 @@
+.main_home{
+    position: relative;
+    height: 69vh;
+    width: 100%;
+}
+
+.img_main{
+    object-fit: cover;
+    height: 99%;
+    width: 99%;
+    padding-left: 0.2rem;
+    border-radius: 3px;
+}
+
+.info{
+    position: absolute;
+    bottom: -5.3rem;
+    background-color: var(--red);
+    right: 10rem;
+    height: 20rem;
+    width: 35rem;
+    padding: 1rem;
+    border-radius: 7px;
+}
+
+.txt-main{
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+.txt-medium{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.txt{
+    color: cornsilk;
+    font-size: 1rem;
+}
+.link{
+    font-size: 1.2rem;
+    color: white;
+    border-bottom: solid 1px white;
+    transition: 1s ease-in all;
+}
+.link:hover{
+    border-bottom: solid 1px var(--red);
+}
+
+.icon{
+    color: var(--medium-blue);
+    transition: 1s ease-in all;
+}
+.icon:hover{
+    color: var(--red);
+}
+
+.secondary-section{
+    margin-top: 6.5rem;
+    margin-bottom: 5rem;
+}
+
+.black{
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: black;
+}
+
+/*          %%%         Camposes styles         %%%         */
+.campos_section{
+    background-color: rgb(224, 222, 222);
+    min-height: 35vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.campos_header{
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.campus_image-section{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.campos_image{
+    height: 15rem;
+    width: 20rem;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.campos_txt{
+    color: black;
+    font-size: 0.9rem;
+    max-width: 23rem;
+    font-weight: 400;
+}
+.campos_bold_txt{
+    color:black;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.campos_btn{
+    border: solid 1px var(--light-blue);
+    color: var(--light-blue);
+    width: 10rem;
+    height: 2.4rem;
+    background-color: white;
+    transition: ease-in 1s all ;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.campos_btn:hover{
+    color: white;
+    background-color: var(--light-blue);
+}
+
+/*          ###         MEDIA QUERY         ###         */
+
+@media only screen and (max-width : 480px) {
+    
+    .img_main{
+        object-fit: cover;
+        width: 100%;
+        padding-left: 0.7rem;
+        padding-right: 0.5rem;
+        border-radius: 3px;
+    }
+
+    .info{
+        position: absolute;
+        bottom: 2rem;
+        background-color: var(--red);
+        right: 3rem;
+        height: 80%;
+        width: 75%;
+        padding: 1rem;
+        border-radius: 7px;
+    }
+
+    .black{
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color: black;
+    }
+
+    .campus_image-section{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;    
+    }
+
+    .campos_image{
+        height: 50%;
+        width: 80%;
+        border-radius: 7px;
+        object-fit: cover;
+    }
+
+    .secondary-section{
+        margin: 5rem 0;
+    }
+
+    .txt-main{
+        color: white;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .info{
+        position: absolute;
+        bottom: 2rem;
+        background-color: var(--red);
+        right: 3rem;
+        height: 80%;
+        width: 75%;
+        padding: 1rem;
+        border-radius: 7px;
+    }
+
+
+    .campus_image-section{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;    
+    }
+
+    .campos_image{
+        height: 50%;
+        width: 80%;
+        border-radius: 7px;
+        object-fit: cover;
+    }
+   
+}
