@@ -8,6 +8,7 @@ const SchoolInfo = () => {
 
     let reducer = useContext(context)
     let {departments} = reducer
+    
     return (
         <section className='information_section-container'>
             <section className='center informative_dashboard-container'>

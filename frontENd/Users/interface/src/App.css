@@ -4,6 +4,7 @@
     --light-blue:#5f6b8e;
     --main-black:#010102;
     --red:#e52326;
+    --medium-red:#ee4547;
     --light-red:#f8d8d9;
     --white:#fff;
     --secondary-white:rgb(247, 247, 247);
@@ -129,6 +130,10 @@ body{
 
 .uppercase{
     text-transform: uppercase;
+}
+
+.capitalize{
+    text-transform: capitalize;
 }
 
 .clickable{

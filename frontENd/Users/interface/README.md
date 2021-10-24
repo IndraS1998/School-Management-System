@@ -108,10 +108,19 @@ payment page
 		---footer page	@DONE
 		
 -do mobile and tablette for dashboard slides
-
+	--mobile
+		---side pannel Done
+		---navigation	Done
+		---edit my semester	Done
+		---registration	DOne
+		---school info	Done
+		---personal info	Done
+		
 -set server with database
 
 -link frontend with api
+
+-fix nav when logged in
 
 -add notifications
 	--when user enters reegistration pageas long as admission datais not yet set #DONE

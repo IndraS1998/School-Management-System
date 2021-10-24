@@ -30,19 +30,19 @@ const TuitionManagement = ({reducer}) => {
 
     return (
         <section className='col fee_info-container mt-3 mb-3'>
-            <h3 className='main_payment-header mb-3'>my payment's so far</h3>
-            <section className='installment_section'>
+            <h3 className='main_payment-header mb-3'>my payments so far</h3>
+            <section className='installment_section-2'>
                 <div className='installment_head-2 pl-3'>
                     <p className='installment_header'>installment detail</p>
                 </div>
-                <div className='space__around pt-2'>
-                    <input className='input' type='text' placeholder='transaction number' 
+                <div className='pt-2 payment_input-container'>
+                    <input className='input mt-2' type='text' placeholder='transaction number' 
                         onChange={e=>onSetString(e,setTransactionNum)} value={transactionNum} />
-                    <input className='input' type='text' placeholder='transaction amount' 
+                    <input className='input mt-2' type='text' placeholder='transaction amount' 
                         onChange={e=>onSetString(e,setTransactionAmt)} value={transactionAmt} />
                         {isTransactionValid?
                             <p className='edit_btn uppercase center' onClick={onPerformPayment}>pay</p>
-                            :<p className='edit_btn-err center uppercase'>pay</p>
+                            :<p className='edit_btn-err mt-2 btn-payment center uppercase'>pay</p>
                         }
                 </div>
             </section>

@@ -11,7 +11,7 @@ import ToastInfo from '../../../UIUX/ToastInfo'
 
 const SidePannel = ({setView,student}) => {
     return (
-        <section className='side_pannel flex__start-start-col'>
+        <section className='side_pannel'>
             <div className='center dash-link bord' onClick={()=>setView()}>
                 <AiOutlineHome size='25' className='lblue-icon_color'/>
                 <p className='ml-5'>dashboard</p>

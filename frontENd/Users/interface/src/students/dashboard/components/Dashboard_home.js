@@ -1,97 +1,83 @@
-import React from 'react';
+import React,{useState} from 'react'
 
-const Dashboard_home = ({departments}) => {
+import './Dashboard_Home.css'
+import ReseatCourse from './dashboardHome-components/ReseatCourse'
+import SelectedCourse from './dashboardHome-components/SelectedCourse'
+/* 
+    ** number of credit required and credit fulfilled
+    ** number of courses registered and courses validated
+    ** number of courses failed and number of courses to be reseated
+    ** courses selected pending for reseat semester
+*/
+const Dashboard_home = ({reducer}) => {
+
+    /*          ###              STATE           ###            */
+    const {loggedStudent} = reducer
+    const myDepartment = reducer.specialities.find(s => s.name === loggedStudent.specialty)
+    const [availableReseats,setAvailableReseats] = useState([...loggedStudent.reseatCourses])
+    const [selectedReseats,setSelectedReseats] = useState([])
+    
+
+    /*          ###             METHODS         ###             */
+    function addReseatHandler(reseat){
+        let newReseats = availableReseats.filter(r => r.resId !== reseat.resId)
+        setAvailableReseats(newReseats)
+        setSelectedReseats([...selectedReseats , reseat])
+    }
+
+    function removeReseatHandler(reseat){
+        let newReseats = selectedReseats.filter(r => r.resId !== reseat.resId)
+        setSelectedReseats(newReseats)
+        setAvailableReseats([...availableReseats , reseat])
+    }
+
+
     return (
-        <section>
-            <section className='center mt-5'>
-                <div className='informative_dashboard'>
-                    <p className='heading-dashboard mt-1 ml-2'>{departments[0].name}</p>
-                    <div className='space__between head-above'>
-                        <p className='info-dashboard'>schools</p>
-                        <div className='number_info-section-green center mr-5'>
-                            <p className='number_info-green'>6</p>
-                        </div>
+        <section className='dashboard-home-main'>
+            <section className='credit-section'> 
+                <div className='dashboard-info space__around-col'>
+                    <div>
+                        <h3 className='dashboard-info-header'>Required credit</h3>
+                    </div>
+                    <div>
+                        <p>{myDepartment.num_credit}</p>
                     </div>
                 </div>
-                <div className='informative_dashboard'>
-                    <p className='heading-dashboard mt-1 ml-2'>{departments[1].name}</p>
-                    <div className='space__between head-above'>
-                        <p className='info-dashboard'>schools</p>
-                        <div className='number_info-section-green center mr-5'>
-                            <p className='number_info-green'>12</p>
-                        </div>
+                <div className='dashboard-info space__around-col'>
+                    <div>
+                        <h4 className='dashboard-info-header-2'>attempted credit</h4>
+                    </div>
+                    <div>
+                        <p>{loggedStudent.attemptedCredit}</p>
                     </div>
                 </div>
-                <div className='informative_dashboard'>
-                    <p className='heading-dashboard mt-1 ml-2'>{departments[2].name}</p>
-                    <div className='space__between head-above'>
-                        <p className='info-dashboard'>schools</p>
-                        <div className='number_info-section-blue center mr-5'>
-                            <p className='number_info-blue'>7</p>
-                        </div>
+                <div className='dashboard-info space__around-col'>
+                    <div>
+                        <h4 className='dashboard-info-header-2'>validated credit</h4>
                     </div>
-                </div>
-                <div className='informative_dashboard'>
-                    <p className='heading-dashboard mt-1 ml-2'>{departments[3].name}</p>
-                    <div className='space__between head-above'>
-                        <p className='info-dashboard'>schools</p>
-                        <div className='number_info-section center mr-5'>
-                            <p className='number_info'>8</p>
-                        </div>
+                    <div>
+                        <p>{loggedStudent.validatedCredit}</p>
                     </div>
                 </div>
             </section>
-            <section className='center'>
-                <section className='percentage_section'>
-                    <h4 className='percentage_section-header ml-3 pt-1'>recent results</h4>
-                    <section className=' percentage_container col'>
-                    <div className='space__around  particular_contained'>
-                        <p className='percentage_header'>hnd percentage 2021</p>
-                        <p className='actual-percentage'>94%</p>
+            <section className='credit_headingContainer'>
+                <p className='credit_headingContainer-p'>Available Reseats</p>
+                <p className='credit_headingContainer-p'>Selected Reseats</p>
+            </section>
+            <section className='reseat_section '>
+                <div className='reseat_partition'>
+                    <div className='reseat_container'>
+                        {availableReseats.map(r => <ReseatCourse reseat_course={r}
+                                 onAddReseat={addReseatHandler}/>)}
                     </div>
-                    <div className='space__around particular_contained'>
-                        <p className='percentage_header'>bts percentage 2021</p>
-                        <p className='actual-percentage'>94%</p>
+                </div>
+                <div className='reseat_partition'>
+                    <div className='reseat_container'>
+                        {selectedReseats.map(r => <SelectedCourse reseat_course={r}
+                             onRemoveReseat={removeReseatHandler}/>)}
                     </div>
-                    </section>
-                </section>
-                <section className='side_percentage'>
-                    <h4 className='percentage_section-header ml-3 pt-1'>previous results</h4>
-                    <section className='flex__start-start-col side-percentage-container'>
-                        <div className='space__around mt-4'>
-                            <p className='percentage_header-sm'>hnd percentage 2021</p>
-                            <p className='actual-percentage-sm'>94%</p>
-                        </div>
-                        <div className='space__around mt-4'>
-                            <p className='percentage_header-sm'>bts percentage 2021</p>
-                            <p className='actual-percentage-sm'>94%</p>
-                        </div>
-                        <div className='space__around mt-4'>
-                            <p className='percentage_header-sm'>hnd percentage 2021</p>
-                            <p className='actual-percentage-sm'>94%</p>
-                        </div>
-                        <div className='space__around mt-4'>
-                            <p className='percentage_header-sm'>bts percentage 2021</p>
-                            <p className='actual-percentage-sm'>94%</p>
-                        </div>
-                        <div className='space__around mt-4'>
-                            <p className='percentage_header-sm'>hnd percentage 2021</p>
-                            <p className='actual-percentage-sm'>94%</p>
-                        </div>
-                        <div className='space__around mt-4'>
-                            <p className='percentage_header-sm'>bts percentage 2021</p>
-                            <p className='actual-percentage-sm'>94%</p>
-                        </div>
-                        <div className='space__around mt-4'>
-                            <p className='percentage_header-sm'>hnd percentage 2021</p>
-                            <p className='actual-percentage-sm'>94%</p>
-                        </div>
-                        <div className='space__around mt-4'>
-                            <p className='percentage_header-sm'>bts percentage 2021</p>
-                            <p className='actual-percentage-sm'>94%</p>
-                        </div>
-                    </section>
-                </section>
+                    
+                </div>
             </section>
         </section>
     );

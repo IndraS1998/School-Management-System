@@ -1,5 +1,5 @@
 .about_section{
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@
 /*will be adjusted again*/
 .about_image{
     height: 30rem;
-    width: 100%;
+    width: 75%;
     margin: 2rem 0;
     object-fit: cover;    
 }
@@ -23,7 +23,7 @@
 
 .about_info-section{
     min-height: 32rem;
-    width: 67.8rem;
+    width: 67.8%;
     background-color: var(--light-blue);
 }
 
@@ -66,13 +66,19 @@
 
 @media only screen and (max-width : 480px) {
     .about_image{
-        height: 20rem;
-        width: 23rem;
-        margin: 2rem 0;
+        height: 15rem;
+        width: 75%;
     }
 
     .about_section{
-        margin: 0.5rem ;
+        width: 90%;
+        margin: 1rem ;
+    }
+
+    .about_text-section{
+        width: 90%;
+        padding: 1rem;
+        margin: 2rem 5rem;
     }
     
     .about_info-section{

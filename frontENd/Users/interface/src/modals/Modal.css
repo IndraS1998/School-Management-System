@@ -23,6 +23,63 @@
     color: var(--white);
 }
 
+/*          @@@         dashboard modal         @@@         */
+.dashboard_modal-body{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: rgb(26, 22, 22);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.modal_container-2{ 
+    background: var(--white);
+    height: 100vh;
+    width: 75vw;
+    position: absolute;
+}
+.dashboard_field-container{
+    width: 100%;
+    height: 4rem;
+    margin: 0.2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard_field-first{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard_field-second{
+    width: 70%;
+}
+
+.linker-dashboard{
+    text-transform: capitalize;
+    margin: 1rem;
+    font-size: 1.3rem;
+    color: var(--main-blue);
+}
+
+.menu_head-dashboard{
+    border-bottom: 1px solid var(--main-blue);
+    width: 100%;
+    height: 7vh;
+}
+
+.modal_header-dashboard{
+    color: var(--main-blue);
+    font-size: 1.5rem;
+    margin-left: 3rem;
+}
+
+.modal_close-dashboard{
+    color: var(--blue);
+}
 /*          @@@             MENU MODAL          @@@*/
 .menu_head{
     border-bottom: 1px solid var(--white);

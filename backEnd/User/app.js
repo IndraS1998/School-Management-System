@@ -1,10 +1,10 @@
+require('dotenv').config()
 //          @@@   IMPORTS   @@@
 
 let express = require("express")
 let body_parser = require('body-parser')
 
-let lecturer_routes = require('./src/routes/lecturer_routes')
-let student_routes = require('./src/routes/student_routes')
+const student_routes = require('./src/mvc/Student/student.router')
 
 //          @@@   EXECUTION   @@@
 
@@ -24,9 +24,8 @@ app.use((req, res, next) => {
 
 
 //          @@@   ROUTES   @@@
-app.use('/lecturers',lecturer_routes)
 app.use('/student',student_routes)
 
 
 //          @@@   CONNECTION   @@@
-app.listen(5000,()=>console.log("app running on port 5000"))
+app.listen(process.env.APP_PORT,()=>console.log("app running on port",process.env.APP_PORT))

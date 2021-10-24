@@ -12,6 +12,7 @@ import SchoolInfo from './students/school_info/SchoolInfo'
 import Footer from './navigation/footer/Footer'
 import {context} from './state/reducer'
 import Modal from './modals/Modal'
+import ScrollToTop from './state/components/ScrollToTop'
 import './App.css'
 
 function App(){
@@ -19,6 +20,7 @@ function App(){
     return(
         <ToastProvider autoDismiss autoDismissTimeout={5000}
             placement="top-right">
+            <ScrollToTop />
             {!reducer.logged && <Navigation />}
             {reducer.isModalOpen && <Modal />}
             <Switch>

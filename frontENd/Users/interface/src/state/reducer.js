@@ -6,16 +6,21 @@ let {Provider} = context
 
 let ContextReducer = ({children}) =>{
     /*          ###STATE###         */
-    let [logged,setLogged] = useState(false)
-    let [loggedStudent,setLoggedStudent] = useState(null)
+    let [logged,setLogged] = useState(true)
+    let [loggedStudent,setLoggedStudent] = useState(data.students[0])
     let [isModalOpen,setIsModalOpen] = useState(false)
     let [modalTrigger,setModalTrigger] = useState('')
     let [departments,setDepartments] = useState(data.departments)
     let [students,setStudents] = useState(data.students)
     let [courses,setCourses] = useState(data.Courses)
     let [specialities,setSpecialities] = useState(data.Specilities)
-    
-
+    const [dashboard,setDashboard] = useState(true)
+    const [transcript,setTranscript] = useState(false)
+    const [info,setInfo] = useState(false)
+    const [semester,setSemester] = useState(false)
+    const [calendar,setCalendar] = useState(false)
+    const [registration,setRegistration] = useState(false)
+    const [schoolInfo,setSchoolInfo] = useState(false)
 
     /*          @@@METHODS@@@           */
     let onLogin = (em,pw) =>{
@@ -89,6 +94,46 @@ let ContextReducer = ({children}) =>{
 
     const onEditPw = () =>{}
 
+    /*          @@@         Dashboard           @@@          */
+    function resetAll(){
+        setDashboard(false);setTranscript(false);setInfo(false);
+        setSemester(false);setCalendar(false);setRegistration(false)
+        setSchoolInfo(false)
+    }
+
+    function setView(v){
+        switch(v){
+            case 'trans':
+                resetAll()
+                setTranscript(true)
+                break;
+            case 'info':
+                resetAll()
+                setInfo(true)
+                break;
+            case 'sem':
+                resetAll()
+                setSemester(true)
+                break;
+            case 'cal':
+                resetAll()
+                setCalendar(true)
+                break;
+            case 'reg':
+                resetAll()
+                setRegistration(true)
+                break;
+            case 'sch':
+                resetAll()
+                setSchoolInfo(true)
+                break;
+            default:
+                resetAll()
+                setDashboard(true)
+                break;
+        }
+    }
+
     /*          @@@              MODAL           @@@            */
     const onOpenModal = (modalTrigger) =>{
         setIsModalOpen(true)
@@ -102,8 +147,8 @@ let ContextReducer = ({children}) =>{
 
     return (
         <div>
-            <Provider value={{onEditPw,logged,onLogOut,onLogin,onSignUp,onSetStudentDetails
-                    ,isModalOpen,onCloseModal,onOpenModal,setModalTrigger,modalTrigger,
+            <Provider value={{onEditPw,logged,onLogOut,onLogin,onSignUp,onSetStudentDetails,dashboard,transcript,info,semester
+                    ,isModalOpen,onCloseModal,onOpenModal,setModalTrigger,modalTrigger,setView,calendar,registration,schoolInfo,
                     loggedStudent,departments,courses,specialities,setIsModalOpen}}>
                 {children}
             </Provider>

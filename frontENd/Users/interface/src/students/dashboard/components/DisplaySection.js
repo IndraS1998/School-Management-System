@@ -10,12 +10,12 @@ import DisplayNav from './DisplayNav';
 
 const DisplaySection = ({reducer,dashboard,transcript,info,semester,calendar,registration,schoolInfo}) => {
 
-    let {departments} = reducer
 
     return (
         <div className='display_section'>
-            <DisplayNav user={reducer.loggedStudent} onLogOut={reducer.onLogOut}/>
-            {dashboard && <Dashboard_home departments={departments}/>}
+            <DisplayNav user={reducer.loggedStudent} onLogOut={reducer.onLogOut}
+             onOpenModal={reducer.onOpenModal} />
+            {dashboard && <Dashboard_home reducer={reducer}/>}
             {transcript && <Transcript />}
             {info && <PersonalInfo reducer={reducer}/>}
             {semester && <Mysemester reducer={reducer}/>}

@@ -15,8 +15,6 @@ let Register = () =>{
     let month
     let day
 
-
-
     switch (d.getMonth()) {
         case 0:
             month = 'January'

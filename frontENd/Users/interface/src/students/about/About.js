@@ -8,8 +8,8 @@ const About = () => {
         <h2 className='about_header'>About our institution</h2>
         <section className='col'>
             <img src='./img/img1.jpg' className='about_image'/>
-            <section className='about_info-section mt-2 col'>
-                <h3 className='about_header-2'>a word from the director</h3>
+            <section className='about_info-section mt-2 pt-4 col'>
+                <h3 className='about_header-2 '>a word from the director</h3>
                 <section className='about_text-section'>
                     <p className='about_txt'>
                         Magna dolor dolores sit diam sanctus. Labore dolor diam lorem dolor diam erat,

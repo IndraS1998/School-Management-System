@@ -1,0 +1,157 @@
+.mainHeader{
+    color: var(--main-blue);
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.notice-red{
+    color: var(--red);
+    font-size: 0.8rem;
+}
+
+.message_textarea{
+    border: solid 1px var(--medium-blue);
+    border-radius: 7px;
+}
+.message_textarea:focus{
+    outline: none;
+}
+
+.edit_password_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mainHeader-2{
+    color: var(--main-black);
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.secondary_header{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color:var(--light-blue)
+}
+
+.info_section{
+    min-height: 5vh;
+    min-width: 65vw;
+    padding: 1.8rem 3.5rem;
+    margin: 0.25rem;
+    background-color: var(--white);
+    border: 1px solid var(--grey);
+    border-radius: 7px;
+}
+
+.info_header{
+    color: var(--main-blue);
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+.info_elt{
+    width: 100%;
+    min-height: 5rem;
+    border-bottom: solid 1px var(--main-blue);
+    padding: 1rem 0;
+}
+
+
+.info_head{
+    color: var(--main-blue);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.info_body{
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.edit_btn{
+    height: 1.5rem;
+    min-width: 4.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--medium-blue);
+    color: white;
+    border-radius: 5px;
+    transition: all ease-in 1s;
+    border: 1px solid var(--medium-blue);
+}
+
+.edit_btn:hover{
+    cursor: pointer;
+    color: black;
+    background-color: var(--secondary-white);
+}
+
+.edit_btn-err{
+    height: 1.5rem;
+    width: 4.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--red);
+    color: white;
+    border-radius: 5px;
+    transition: all ease-in 1s;
+    border: 1px solid var(--red);
+}
+
+.sm_txt{
+    font-size: 0.7rem;
+}
+
+.image_container-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*          @@@         Media query         @@@         */
+
+@media only screen and (max-width : 480px) {
+    
+
+    .edit_password_container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mainHeader{
+        font-size: 1.4rem;
+    }
+
+    .secondary_header{
+        font-size: 1.2rem;
+    }
+
+    .image_container-div{
+        flex-direction: column;
+    }
+
+    .first_div{
+        padding-left: 1rem;
+    }
+
+    .info_elt{
+        width: 50vh;
+    }
+
+    .message-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .message_textarea{
+        width: 15rem;
+        margin-bottom: 1rem;
+    }
+}

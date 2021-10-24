@@ -1,0 +1,142 @@
+.dashboard-home-main{
+    height: 93%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dashboard-info{
+    background: var(--light-blue);
+    width: 19rem;
+    height: 5rem;
+    border-radius: 3px;
+    margin: 0.5rem 1rem ;
+    padding: 0.5rem;
+}
+
+.dashboard-info-header{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.dashboard-info-header-2{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.credit-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reseat_section{
+    margin: 1rem;
+    min-width: 55vw;
+    min-height: 45vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 5px;
+    border: solid 1px var(--grey);
+}
+
+.reseat_partition{
+    width: 50%;
+}
+
+.reseat_container{
+    margin: 0.5rem;
+    min-width: 35%;
+    min-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reseatCourse{
+    margin: 0.25rem 0.5rem;
+    width: 14rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.45rem;
+    border-radius: 5px;
+    border: solid 1px var(--light-blue);
+}
+
+.operate_btn-blue{
+    height: 1.6rem;
+    width: 1.6rem;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--light-blue);
+    cursor: pointer;
+    color: var(--white);
+    font-weight: 500;
+    transition: all ease-in-out 1s;
+}
+
+.operate_btn-blue:hover{
+    background-color: var(--medium-blue);
+}
+
+.operate_btn-red{
+    font-size: 1.5rem;
+    padding: 0.3rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--medium-red);
+    height: 1.6rem;
+    width: 1.6rem;
+    cursor: pointer;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.operate_btn-red:hover{
+    background-color: var(--red);
+}
+
+.credit_headingContainer{
+    min-width: 45vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.credit_headingContainer-p{
+    font-size: 1.3rem;
+    color: var(--dark-grey);
+}
+
+@media only screen and (max-width : 480px) {
+    .credit-section{
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    
+    .reseat_section{
+        margin: 1rem;
+        min-width: 90vw;
+    }
+
+    .reseatCourse{
+        width: 9rem;
+    }
+
+    .credit_headingContainer-p{
+        font-size: 1.2rem;
+        margin: 0.3rem 1rem;
+    }
+}

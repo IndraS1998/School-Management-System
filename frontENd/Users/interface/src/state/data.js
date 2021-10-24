@@ -16,10 +16,16 @@ export const data = {
             email:'ngolissom@yahoo.com',
             contact:654565256,
             program:'HND',
+            year : 1,
             password:'ngolissom',
             imageSet:false,
-            isNew:true,
-            inbox : []
+            isNew:false,
+            attemptedCredit:55,
+            validatedCredit:45,
+            inbox : [],
+            coursesSelectedForReseat : [],
+            reseatCourses : [{resId : 'SWE 215'},{resId : 'SWE 308'},{resId : 'SWE 115'},
+            {resId : 'FRE 101'},{resId : 'ACC 303'}]
         }
     ],
     departments : [

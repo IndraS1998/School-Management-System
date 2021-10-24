@@ -1,6 +1,7 @@
 import React,{useState,useEffect,useRef} from 'react'
 import {CgProfile} from 'react-icons/cg'
 
+import './PersonalInfo.css'
 import {onSetString} from '../../../state/components/functions'
 /*
     todo
@@ -9,8 +10,6 @@ import {onSetString} from '../../../state/components/functions'
 const PersonalInfo = ({reducer}) => {
     const {first_name,last_name,imageSet,Department,DOB,
         specialty,Sex,img,program,matricule,contact,email} = reducer.loggedStudent
-    
-        console.log(DOB.toLocaleString())
 
     let [pw,setPw] = useState('')
     let [prevPw,setPrevPw] = useState('')
@@ -87,33 +86,15 @@ const PersonalInfo = ({reducer}) => {
     return (
         <section className='mt-5 col'>
             <div><h3 className='mainHeader'>personal info</h3></div>
-            <div><h5 className='secondary_header mt-3'>basic information about your account</h5></div>
+            <div><h5 className='secondary_header mt-3 capitalize'>basic information about your account</h5></div>
             {!imageSet && <p className='mt-5 notice-red'>*please set your profile image</p>}
             <section className='info_section'>
-                <div>
+                <div className='containing-head'>
                     <p className='mainHeader-2'>basic info</p>
                     <p className='info_body mt-2'>your personal info 
                     is strictky confidential</p>    
                 </div>
-                <div className='space__around info_elt'>
-                    <div className='first_div'>
-                        <p className='info_head'>picture</p>
-                    </div>
-                    <div className='second_div'>
-                        {imageSet?
-                        <img src={img} className='img-link' alt='ooppss!'/>:
-                        <div className='center'>
-                            <input style={{display:'none'}} type='file' ref={imgInput} onChange={e=>fileSelectionHandler(e)}/>           
-                            <p className='edit_btn center ml-5' onClick={()=>imgInput.current.click()}>select image</p>
-                            {imgPicked?
-                                <p className='edit_btn center ml-5' onClick={e=>fileUploader(e)}>upload</p>
-                                :<p className='edit_btn-err center ml-5' >upload</p>
-                            }
-                        </div>
-                        }
-                    </div>
-                    {/*img?<img src={img} className='img-link' alt='ooppss!'/>:*/}
-                </div>
+                
                 <div className='space__around info_elt'>
                     <div className='first_div'>
                         <p className='info_head'>Student Name</p>
@@ -140,18 +121,37 @@ const PersonalInfo = ({reducer}) => {
                 </div>
                 <div className='col info_elt'>
                     <div className='info_head mb-4'>edit password</div>
-                    <div className='space__around mb-3 edit_password_container'>
-                        <input className='regitration_input' onChange={e=>onSetString(e,setPrevPw)} placeholder='enter previous password' 
+                    <div className=' mb-3 edit_password_container'>
+                        <input className='regitration_input mt-2' onChange={e=>onSetString(e,setPrevPw)} placeholder='enter previous password' 
                                 type='password' value={prevPw} />
-                        <input className='regitration_input' onChange={e=>onSetString(e,setPw)} placeholder='new password' 
+                        <input className='regitration_input mt-2' onChange={e=>onSetString(e,setPw)} placeholder='new password' 
                                 type='password' value={pw} />
-                        <input className='regitration_input' onChange={e=>onSetString(e,setConfPw)} placeholder='confirm new password' 
+                        <input className='regitration_input mt-2' onChange={e=>onSetString(e,setConfPw)} placeholder='confirm new password' 
                                 type='password' value={confPw} />
                         </div>
                     <div className='mr-5'>
                         {isPasswordsFilled?<p className='btn_blue center ml-5' onClick={onEditPw}>edit password</p>
                             :<p className='btn_red center ml-5' dissabled='true'>edit password</p>}
                     </div>
+                </div>
+                <div className='space__around info_elt'>
+                    <div className='first_div '>
+                        <p className='info_head '>picture</p>
+                    </div>
+                    <div className='second_div'>
+                        {imageSet?
+                        <img src={img} className='img-link' alt='ooppss!'/>:
+                        <div className='image_container-div'>
+                            <input style={{display:'none'}} type='file' ref={imgInput} onChange={e=>fileSelectionHandler(e)}/>           
+                            <p className='edit_btn center ml-5' onClick={()=>imgInput.current.click()}>select image</p>
+                            {imgPicked?
+                                <p className='edit_btn center ml-5 mt-2' onClick={e=>fileUploader(e)}>upload</p>
+                                :<p className='edit_btn-err center ml-5 mt-2' >upload</p>
+                            }
+                        </div>
+                        }
+                    </div>
+                    {/*img?<img src={img} className='img-link' alt='ooppss!'/>:*/}
                 </div>
             </section>
             <section className='info_section mt-5'> 
@@ -218,8 +218,9 @@ const PersonalInfo = ({reducer}) => {
                     <div className='first_div'>
                         <p className='info_head'>message</p>
                     </div>
-                    <div className='second_div'>
-                        <textarea rows='4' cols='37' className='message_textarea' value={message} onChange={e=>onSetString(e,setMessage)}/>
+                    <div className='second_div message-container'>
+                        <textarea rows='4' className='message_textarea' 
+                            value={message} onChange={e=>onSetString(e,setMessage)}/>
                         {isMessageFilled?
                                 <p className='edit_btn center ml-5' onClick={onSendMessage}>send</p>
                                 :<p className='edit_btn-err center ml-5' >send</p>
