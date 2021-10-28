@@ -113,7 +113,7 @@ module.exports = {
             if(err){
                 return next(new HttpError('internal server error',500))
             }else{
-                studentCount = r.length + 1
+                studentCount = r.length + 1 
             }
         })
         const m = new Matricule(body.specialityCode,studentCount)
